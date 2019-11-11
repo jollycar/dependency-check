@@ -9,5 +9,6 @@
         <sha1>e201bb70b7469ba18dd58ed8268aa44e702fa2f0</sha1>
         <cve>CVE-2019-16942</cve>
         <cve>CVE-2019-16943</cve>
+        <cve>CVE-2019-17531</cve>
     </suppress>
 </suppressions>
