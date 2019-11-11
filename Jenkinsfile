@@ -12,7 +12,7 @@ pipeline {
         }
         stage('Dependency check') {
             steps {
-                dependencyCheck additionalArguments: '', odcInstallation: 'dependency-check'
+                dependencyCheck additionalArguments: '--suppression owasp-suppression.xml', odcInstallation: 'dependency-check'
                 dependencyCheckPublisher pattern: ''
             }
         }

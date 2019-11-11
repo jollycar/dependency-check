@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suppressions xmlns="https://jeremylong.github.io/DependencyCheck/dependency-suppression.1.2.xsd">
+    <suppress>
+        <notes><![CDATA[
+	  https://github.com/FasterXML/jackson-databind/issues/2478
+	  Suppress since commons-dbcp or p6spy jar's are not on classpath
+      file name: jackson-databind-2.9.10.jar
+      ]]></notes>
+        <sha1>e201bb70b7469ba18dd58ed8268aa44e702fa2f0</sha1>
+        <cve>CVE-2019-16942</cve>
+        <cve>CVE-2019-16943</cve>
+    </suppress>
+</suppressions>
