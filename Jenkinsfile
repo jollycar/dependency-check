@@ -13,7 +13,11 @@ pipeline {
         stage('Dependency check') {
             steps {
                 dependencyCheck additionalArguments: '--suppression owasp-suppression.xml', odcInstallation: 'dependency-check'
-                dependencyCheckPublisher failedNewCritical: 0, failedNewHigh: 0, failedNewLow: 0, failedNewMedium: 0, failedTotalCritical: 0, failedTotalHigh: 0, failedTotalLow: 0, failedTotalMedium: 0, pattern: '', unstableNewCritical: 0, unstableNewHigh: 0, unstableNewLow: 0, unstableNewMedium: 0, unstableTotalCritical: 0, unstableTotalHigh: 0, unstableTotalLow: 0, unstableTotalMedium: 0
+                dependencyCheckPublisher pattern: '', \
+                failedNewCritical: 0, failedNewHigh: 1, failedNewMedium: 4, failedNewLow: 8, \
+                failedTotalCritical: 0, failedTotalHigh: 1, failedTotalMedium: 4, failedTotalLow: 8, \
+                unstableNewCritical: 0, unstableNewHigh: 1, unstableNewMedium: 2, unstableNewLow: 4, \
+                unstableTotalCritical: 0, unstableTotalHigh: 1, unstableTotalMedium: 2, unstableTotalLow: 4
             }
         }
     }
